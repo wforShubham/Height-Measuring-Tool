@@ -24,7 +24,7 @@ function onOrientationChange(event) {
     console.log(event.beta);
     let angle = event.beta - 90;
     if (angle < 0) {
-        angle = 0;
+        angle = -angle;
     }
 
     const distToTree = document.getElementById("mySlider").value;
