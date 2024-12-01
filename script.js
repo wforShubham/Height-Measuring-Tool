@@ -23,9 +23,9 @@ function main() {
 function onOrientationChange(event) {
     console.log(event.beta);
     let angle = event.beta - 90;
-    //if (angle < 0) {
-     //   angle = -angle;
-    //}
+    if (angle < 0) {
+        angle = 0;
+    }
 
     const distToTree = document.getElementById("mySlider").value;
     document.getElementById("myLabel").innerHTML = "Distance to object: " + distToTree + " meters";
